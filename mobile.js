@@ -18,6 +18,13 @@ class Paper {
   rotating = false;
 
   init(paper) {
+    const clickHereButton = paper.querySelector('.btn'); // Find the "Please Click Here" button within the paper
+
+    // Add a click event listener to the button
+    clickHereButton.addEventListener('click', () => {
+      window.location.href = 'index.html'; // Navigate to index.html when the button is clicked
+    });
+
     paper.addEventListener('touchmove', (e) => {
       e.preventDefault();
       if(!this.rotating) {
@@ -51,7 +58,7 @@ class Paper {
 
         paper.style.transform = `translateX(${this.currentPaperX}px) translateY(${this.currentPaperY}px) rotateZ(${this.rotation}deg)`;
       }
-    })
+    });
 
     paper.addEventListener('touchstart', (e) => {
       if(this.holdingPaper) return; 
