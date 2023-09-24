@@ -10,8 +10,9 @@ body {
 
   /* Background styling */
   background-size: 1000px; /* Consider reducing the size */
-  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+  background-image: url("images/pexels-monstera-production-5874620.jpg");
   background-position: center center;
+  margin: 0; /* Remove default margin to fully utilize screen space */
 }
 
 /* Styling for the paper container */
@@ -36,6 +37,7 @@ body {
   height: 200px;
   padding: 0;
   border-radius: 50%;
+  animation: heartbeat 2s infinite; /* Add the heartbeat animation */
 }
 
 /* Styling for an image within the paper */
@@ -51,7 +53,7 @@ body {
 /* Styling for all images within your content */
 img {
   max-height: 200px;
-  width: 100%;
+  width: auto;
   user-select: none;
 }
 
@@ -77,4 +79,17 @@ p {
   color: rgb(0, 0, 100);
   opacity: 0.75;
   user-select: none;
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
