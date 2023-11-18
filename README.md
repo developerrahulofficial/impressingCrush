@@ -1,6 +1,4 @@
-Certainly! Here's a short README tailored for your "Impressing Crush" project:
 
----
 
 # Impressing Crush
 
@@ -30,7 +28,3 @@ Contributions are welcome! If you have suggestions, bug reports, or want to cont
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
----
-
-Feel free to replace placeholder text with specific details about your project, such as installation instructions or additional features.
