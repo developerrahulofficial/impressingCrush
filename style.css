@@ -1,53 +1,63 @@
+/* Importing a font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 
-
-
-
+/* Styling for the body */
 body {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-size: 1000px;
-  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+  /* Background styling */
+  background-size: 1000px; /* Consider reducing the size */
+  background-image: url("images/pexels-monstera-production-5874620.jpg");
   background-position: center center;
+  margin: 0; /* Remove default margin to fully utilize screen space */
 }
 
+/* Styling for the paper container */
 .paper {
   background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
   background-size: 500px;
   background-position: center center;
   padding: 20px 100px;
-/*  min-width: 800px; */
-  
+  /* min-width: 800px; */ /* You can uncomment this if needed */
+
   transform: rotateZ(-5deg);
-  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
   
+  /* Absolute positioning */
   position: absolute;
 }
 
+/* Styling for a heart shape element */
 .paper.heart {
   position: relative;
   width: 200px;
   height: 200px;
   padding: 0;
   border-radius: 50%;
+  animation: heartbeat 2s infinite; /* Add the heartbeat animation */
 }
 
+/* Styling for an image within the paper */
 .paper.image {
   padding: 10px;
 }
+
+/* Styling for paragraphs within .paper.image */
 .paper.image p {
   font-size: 30px;
 }
 
+/* Styling for all images within your content */
 img {
   max-height: 200px;
-  width: 100%;
+  width: auto;
   user-select: none;
 }
 
+/* Adding a heart shape background to .paper.heart */
 .paper.heart::after {
   content: "";
   background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
@@ -62,12 +72,24 @@ img {
   opacity: 0.6;
 }
 
+/* Styling for paragraphs */
 p {
   font-family: 'Zeyada';
   font-size: 50px;
-  color: rgb(0,0,100);
+  color: black;
   opacity: 0.75;
   user-select: none;
-  
-  // filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9));
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

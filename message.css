@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: black; /* Set a black background color to the body to eliminate any white space */
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blur-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/ideogram.jpeg'); /* Replace with your blurred background image URL */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1; /* Place the background behind the content */
+}
+
+.message {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5); /* Add a black vignette effect */
+    border-radius: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.message p {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #e64d2f;
+}
